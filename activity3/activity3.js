@@ -9,6 +9,7 @@ app.set('port', 3000);
 
 app.get('/',function(req,res){
   res.render('home')
+  res.render(Math.random())
 });
 
 app.get('/other-page',function(req,res){
