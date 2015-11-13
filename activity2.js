@@ -6,7 +6,7 @@ app.set('port', 3000);
 
 app.get('/',function(req,res){
   res.type('text/plain');
-  res.send('Welcome to the main buckle!');
+  res.send('Abigail doesn't like this webpage!');
 });
 
 app.get('/other-page',function(req,res){
