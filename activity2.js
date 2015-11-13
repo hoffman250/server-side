@@ -6,7 +6,7 @@ app.set('port', 3000);
 
 app.get('/',function(req,res){
   res.type('text/plain');
-  res.send("Abigail doesn't like this webpage!");
+  res.send("Testing a random number generator" + math.random());
 });
 
 app.get('/other-page',function(req,res){
