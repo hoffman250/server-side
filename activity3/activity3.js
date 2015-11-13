@@ -9,7 +9,6 @@ app.set('port', 3000);
 
 app.get('/',function(req,res){
   res.render('home')
-  res.render(Math.random())
 });
 
 app.get('/other-page',function(req,res){
@@ -25,6 +24,15 @@ function genContext(){
 
 app.get('/time',function(req,res){
   res.render('time', genContext());
+});
+
+// function for generating random number
+function genRandom(){
+  return Math.random;
+}
+
+app.get('/random',function(req,res){
+  res.render('random', genRandom());
 });
 
 app.use(function(req,res){
