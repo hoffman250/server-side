@@ -28,7 +28,7 @@ app.get('/time',function(req,res){
 
 // function for generating random number
 function genRandom(){
-  document.write("have a nice day");
+  Math.random();
 }
 
 app.get('/random',function(req,res){
