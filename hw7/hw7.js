@@ -20,7 +20,7 @@ app.get('/',function(req,res){
   }
   var obArray = {};
   obArray.getData = dataArray;
-  res.render('get-request', context);
+  res.render('get-request', obArray);
 });
 /*
 app.post('/', function(req,res){
