@@ -22,19 +22,20 @@ app.get('/',function(req,res){
   obArray.getData = dataArray;
   res.render('get-request', obArray);
 });
-/*
+
+// post handler modified from lecture to work on default webpage
 app.post('/', function(req,res){
-  var qParams = [];
+  var dataArray = [];
   for (var p in req.body){
-    qParams.push({'name':p,'value':req.body[p]})
+    dataArray.push({'name':p,'value':req.body[p]})
   }
-  console.log(qParams);
+  console.log(dataArray);
   console.log(req.body);
-  var context = {};
-  context.dataList = qParams;
-  res.render('post-request', context);
+  var obArray = {};
+  obArray.getData = dataArray;
+  res.render('post-request', obArray);
 });
-*/
+
 app.use(function(req,res){
   res.status(404);
   res.render('404');
