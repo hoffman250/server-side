@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 3001);
+app.set('port', 3030);
 
 // get handler modified from lecture to work on default webpage
 app.get('/',function(req,res){
