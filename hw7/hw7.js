@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 3030);
+app.set('port', 3030);		// changed to port 3030 for final assignment code
 
 // get handler modified from lecture to work on default webpage
 app.get('/',function(req,res){
