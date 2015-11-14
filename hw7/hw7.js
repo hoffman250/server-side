@@ -17,7 +17,7 @@ app.set('port', 3030);
 app.get('/',function(req,res){
   var dataArray = [];
   for (var p in req.query){
-    dataArray.push({'name':p,'value':req.query[p]})
+    dataArray.push({'name':p,'value1':req.query[p],'value2':req.query[p]})
   }
   var obArray = {};
   obArray.getData = dataArray;
