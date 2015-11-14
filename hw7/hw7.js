@@ -22,7 +22,7 @@ app.get('/',function(req,res){
   obArray.getData = dataArray;
   res.render('get-request', context);
 });
-
+/*
 app.post('/', function(req,res){
   var qParams = [];
   for (var p in req.body){
@@ -34,7 +34,7 @@ app.post('/', function(req,res){
   context.dataList = qParams;
   res.render('post-request', context);
 });
-
+*/
 app.use(function(req,res){
   res.status(404);
   res.render('404');
