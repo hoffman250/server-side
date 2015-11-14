@@ -11,17 +11,19 @@ app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.set('port', 3000);
 
+// get handler modified from lecture to work on default webpage
+// 
 app.get('/',function(req,res){
-  var qParams = [];
+  var dataArray = [];
   for (var p in req.query){
-    qParams.push({'name':p,'value':req.query[p]})
+    dataArray.push({'name':p,'value':req.query[p]})
   }
-  var context = {};
-  context.dataList = qParams;
+  var obArray = {};
+  obArray.getData = dataArray;
   res.render('get-request', context);
 });
 
-app.post('/post-loopback', function(req,res){
+app.post('/', function(req,res){
   var qParams = [];
   for (var p in req.body){
     qParams.push({'name':p,'value':req.body[p]})
@@ -30,7 +32,7 @@ app.post('/post-loopback', function(req,res){
   console.log(req.body);
   var context = {};
   context.dataList = qParams;
-  res.render('post-loopback', context);
+  res.render('post-request', context);
 });
 
 app.use(function(req,res){
