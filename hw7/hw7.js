@@ -16,8 +16,8 @@ app.set('port', 3030);
 // get handler modified from lecture to work on default webpage
 app.get('/',function(req,res){
   var dataArray = [];
-  for (var p in req.query){
-    dataArray.push({'name':p,'value':req.query[p]})
+  for (var prop in req.query){
+    dataArray.push({'name':prop,'value':req.query[prop]})
   }
   var obArray = {};
   obArray.getData = dataArray;
@@ -27,8 +27,8 @@ app.get('/',function(req,res){
 // post handler modified from lecture to work on default webpage
 app.post('/', function(req,res){
   var dataArray = [];
-  for (var p in req.body){
-    dataArray.push({'name':p,'value':req.body[p]})
+  for (var prop in req.body){
+    dataArray.push({'name':prop,'value':req.body[prop]})
   }
   var obArray = {};
   obArray.getData = dataArray;
