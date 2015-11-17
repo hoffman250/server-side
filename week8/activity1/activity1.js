@@ -15,7 +15,7 @@ app.set('view engine', 'handlebars');
 app.set('port', 3000);		// changed to port 3030 for final assignment code
 
 // get handler modified from lecture to work on default webpage
-app.get('/count',function(req,res){
+app.get('/',function(req,res){
   	var context = {};
 	context.count = req.session.count || 0;
 	req.session.count = context.count + 1;
@@ -23,7 +23,7 @@ app.get('/count',function(req,res){
 });
 
 // post handler modified from lecture to work on default webpage
-app.post('/count', function(req,res){
+app.post('/', function(req,res){
   	var context = [];
 	if(req.body.command === "resetCount"){
 		//req.session.count = 0;
